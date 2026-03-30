@@ -7,7 +7,7 @@ Documenting earned credentials, active studies, and long-term roadmap — all in
 
 ## Current Status (as of 2026-03-28)
 
-**Live Interactive Kanban Board**: [Cybersecurity Certification Roadmap](https://github.com/users/jacob-kraniak/projects/3/views/1)  
+**Live Interactive Kanban Board**: [Cybersecurity Certification Roadmap](https://github.com/users/jacob-kraniak/projects/3/)  
 **All Badges**: [Credly Profile](https://www.credly.com/users/jacob-kraniak)
 
 Detailed objectives, study resources, costs, and full roadmaps are available in **[ROADMAP.md](ROADMAP.md)**.
