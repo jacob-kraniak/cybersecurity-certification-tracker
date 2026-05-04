@@ -1,7 +1,6 @@
-
 name: New Certification Entry
-description: Add a new certification to the roadmap tracker (ISC2, CompTIA, ISACA, etc.)
-title: "[Certification] ACRONYM - Full Certification Name"
+description: Add or update a certification with full details for consistent tracking
+title: "[Certification] ACRONYM - Full Name (Code if applicable)"
 labels: ["certification"]
 assignees: ["jacob-kraniak"]
 
@@ -9,25 +8,24 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## New Certification Tracker
+        # Certification Tracker Entry
         
-        Use this template to keep consistency across the project board.
+        Keep all issues consistent for the [Cert Roadmap Board](https://github.com/users/jacob-kraniak/projects/3/views/4).
 
   - type: input
     id: status
     attributes:
-      label: Current Status
-      description: e.g., Backlog / In Progress / Completed
+      label: Status
+      description: Backlog / In Progress / Studying / Completed / Certified
       placeholder: Backlog
     validations:
       required: true
 
   - type: input
-    id: target
+    id: target_date
     attributes:
       label: Target Completion
-      description: YYYY-MM or quarter
-      placeholder: 2026-12
+      placeholder: 2026-12 or Q4 2026
 
   - type: dropdown
     id: priority
@@ -37,6 +35,7 @@ body:
         - High
         - Medium
         - Low
+      default: 1
     validations:
       required: true
 
@@ -44,70 +43,80 @@ body:
     id: overview
     attributes:
       label: Overview
-      description: Short description, who it's for, why pursue it.
-      placeholder: Proves expertise in...
+      description: Brief description, target roles, value.
     validations:
       required: true
 
   - type: input
-    id: official_page
+    id: official_link
     attributes:
       label: Official Page
-      placeholder: https://www.isc2.org/certifications/...
+      placeholder: https://...
 
   - type: input
     id: exam_outline
     attributes:
-      label: Exam Outline / Resources Link
-      placeholder: Direct link to latest outline PDF
+      label: Exam Outline / Syllabus
+      placeholder: https://...
 
   - type: textarea
     id: prerequisites
     attributes:
-      label: Prerequisites / Experience Requirements
-      description: Experience, prior certs, etc.
-      placeholder: CISSP + 2 years OR 7 years...
+      label: Prerequisites / Experience
+      placeholder: e.g., Prior cert + X years...
+
+  - type: textarea
+    id: exam_details
+    attributes:
+      label: Exam Details
+      description: Include the fields you use
+      placeholder: |
+        - Duration: X hours
+        - Questions: XXX (Multiple Choice / Performance-based / etc.)
+        - Price: ~$XXX USD
+        - Passing Score: XXX / 1000 or XX%
+        - Format: Pearson VUE / etc.
+    validations:
+      required: true
 
   - type: textarea
     id: domains
     attributes:
       label: Domains & Study Checklist
-      description: List domains with % weights and key subtopics. Use markdown checkboxes.
+      description: Weights + checkboxes for progress
       placeholder: |
         - [ ] Domain 1: Name (XX%)
-          - Subtopic 1
-          - Subtopic 2
+          - Key topics...
     validations:
       required: true
 
   - type: textarea
     id: resources
     attributes:
-      label: Recommended Resources
+      label: Resources & Study Plan
       placeholder: |
         - Official training
-        - Books / courses
-        - Practice exams
+        - Books / practice tests
+        - Cost notes
 
   - type: textarea
     id: milestones
     attributes:
       label: Milestones / Tasks
-      description: Trackable checklist
       placeholder: |
-        - [ ] Complete domain study
-        - [ ] Practice exams (80%+)
-        - [ ] Schedule & pass exam
-        - [ ] Update Credly / LinkedIn / board
+        - [ ] Domain study & notes
+        - [ ] Practice exams (target 80%+)
+        - [ ] Schedule exam
+        - [ ] Pass & update Credly / board
+        - [ ] Post-cert actions (CEUs, resume, etc.)
 
   - type: input
-    id: labels_extra
+    id: extra_labels
     attributes:
-      label: Additional Labels
-      description: e.g., isc2, advanced, management
-      placeholder: isc2, advanced
+      label: Additional Labels (comma separated)
+      placeholder: isc2, advanced, management, analyst
 
   - type: markdown
     attributes:
       value: |
-        **After creation:** Add to the appropriate column on the [Cert Roadmap Board](https://github.com/users/jacob-kraniak/projects/3/views/4) and link to any parent milestone (e.g., "ISC2 Advanced").
+        **Project Board Tip**: After creation, drag to the correct column and populate custom fields (Status, Target Date, Priority, Cost if you have one, etc.).
