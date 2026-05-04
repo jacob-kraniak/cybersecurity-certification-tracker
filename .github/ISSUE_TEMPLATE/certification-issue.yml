@@ -1,1 +1,113 @@
 
+name: New Certification Entry
+description: Add a new certification to the roadmap tracker (ISC2, CompTIA, ISACA, etc.)
+title: "[Certification] ACRONYM - Full Certification Name"
+labels: ["certification"]
+assignees: ["jacob-kraniak"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## New Certification Tracker
+        
+        Use this template to keep consistency across the project board.
+
+  - type: input
+    id: status
+    attributes:
+      label: Current Status
+      description: e.g., Backlog / In Progress / Completed
+      placeholder: Backlog
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: Target Completion
+      description: YYYY-MM or quarter
+      placeholder: 2026-12
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview
+      description: Short description, who it's for, why pursue it.
+      placeholder: Proves expertise in...
+    validations:
+      required: true
+
+  - type: input
+    id: official_page
+    attributes:
+      label: Official Page
+      placeholder: https://www.isc2.org/certifications/...
+
+  - type: input
+    id: exam_outline
+    attributes:
+      label: Exam Outline / Resources Link
+      placeholder: Direct link to latest outline PDF
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites / Experience Requirements
+      description: Experience, prior certs, etc.
+      placeholder: CISSP + 2 years OR 7 years...
+
+  - type: textarea
+    id: domains
+    attributes:
+      label: Domains & Study Checklist
+      description: List domains with % weights and key subtopics. Use markdown checkboxes.
+      placeholder: |
+        - [ ] Domain 1: Name (XX%)
+          - Subtopic 1
+          - Subtopic 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Recommended Resources
+      placeholder: |
+        - Official training
+        - Books / courses
+        - Practice exams
+
+  - type: textarea
+    id: milestones
+    attributes:
+      label: Milestones / Tasks
+      description: Trackable checklist
+      placeholder: |
+        - [ ] Complete domain study
+        - [ ] Practice exams (80%+)
+        - [ ] Schedule & pass exam
+        - [ ] Update Credly / LinkedIn / board
+
+  - type: input
+    id: labels_extra
+    attributes:
+      label: Additional Labels
+      description: e.g., isc2, advanced, management
+      placeholder: isc2, advanced
+
+  - type: markdown
+    attributes:
+      value: |
+        **After creation:** Add to the appropriate column on the [Cert Roadmap Board](https://github.com/users/jacob-kraniak/projects/3/views/4) and link to any parent milestone (e.g., "ISC2 Advanced").
