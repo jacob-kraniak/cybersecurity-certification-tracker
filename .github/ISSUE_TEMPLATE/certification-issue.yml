@@ -1,6 +1,6 @@
 name: New Certification Entry
 description: Add or update a certification with full details for consistent tracking
-dtitle: "[Certification] ACRONYM - Full Name (Code if applicable)"
+title: "[Certification] ACRONYM - Full Name (Code if applicable)"
 labels: ["certification"]
 assignees: ["jacob-kraniak"]
 
@@ -146,3 +146,4 @@ body:
         **Project Board Tip**: After creation, drag to the correct column and populate custom fields (Status, Target Date, Priority, Cost if you have one, etc.).
         
         The Credly Badge URL and ID fields above are now used by automation to keep the README ribbon in sync.
+"
