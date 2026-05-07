@@ -1,6 +1,6 @@
 name: New Certification Entry
 description: Add or update a certification with full details for consistent tracking
-title: "[Certification] ACRONYM - Full Name (Code if applicable)"
+dtitle: "[Certification] ACRONYM - Full Name (Code if applicable)"
 labels: ["certification"]
 assignees: ["jacob-kraniak"]
 
@@ -11,15 +11,39 @@ body:
         # Certification Tracker Entry
         
         Keep all issues consistent for the [Cert Roadmap Board](https://github.com/users/jacob-kraniak/projects/3/views/4).
+        
+        **Important for Automation**: When a certification becomes Active or Certified, please add the direct Credly Badge URL below. This link is used by the README ribbon workflow for exact matching.
 
   - type: input
     id: status
     attributes:
       label: Status
-      description: Backlog / In Progress / Studying / Completed / Certified
+      description: Backlog / In Progress / Studying / Completed / Certified / Active
       placeholder: Backlog
     validations:
       required: true
+
+  - type: input
+    id: date_certified
+    attributes:
+      label: Date Certified (if applicable)
+      placeholder: 2026-05-07 or May 2026
+
+  - type: input
+    id: credly_badge_url
+    attributes:
+      label: Credly Badge URL (Direct Link) - Required for Active/Certified
+      description: Paste the full public URL of the specific badge (e.g. https://www.credly.com/badges/1fc6fa72-65b5-4d96-bf02-88a27b0e71e2)
+      placeholder: https://www.credly.com/badges/...
+    validations:
+      required: false
+
+  - type: input
+    id: credly_badge_id
+    attributes:
+      label: Credly Badge ID (Optional but recommended for automation)
+      description: The UUID portion from the Credly URL above (used for exact matching)
+      placeholder: 1fc6fa72-65b5-4d96-bf02-88a27b0e71e2
 
   - type: input
     id: target_date
@@ -120,3 +144,6 @@ body:
     attributes:
       value: |
         **Project Board Tip**: After creation, drag to the correct column and populate custom fields (Status, Target Date, Priority, Cost if you have one, etc.).
+        
+        The Credly Badge URL and ID fields above are now used by automation to keep the README ribbon in sync.
+"
