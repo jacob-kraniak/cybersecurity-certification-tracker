@@ -5,7 +5,7 @@ Documenting earned credentials, active studies, and long-term roadmap — all in
 
 > Primary sources: [cyberseccertificates.com](https://cyberseccertificates.com/index.html) • [Paul Jerimy Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap)
 
-## Current Status (as of 2026-05-02)
+## Current Status (as of 2026-09-25)
 
 **Live Interactive Kanban Board**: [Cybersecurity Certification Roadmap](https://github.com/users/jacob-kraniak/projects/3/)  
 **All Badges**: [Credly Profile](https://www.credly.com/users/jacob-kraniak)
@@ -17,6 +17,7 @@ Detailed objectives, study resources, costs, and full roadmaps are available in 
 - **2026-03-01** — Grok Project moved into this dedicated repository  
 - **2026-03-28** — Repository made public + accurate earned/expired dates from Credly + linked to Project board  
 - **2026-05-02** - Passed Exam for ISC^2 CC. Created first draft of action yml.
+- **2026-09-25** — Credly badge sync runs via GitHub Actions (`Sync Existing Credly Badges` workflow).
 
-*Last updated: 2026-05-02*  
-Future enhancements: GitHub Actions for Credly badge auto-sync and CEU/expiration tracking.
+*Last updated: 2026-09-25*  
+Future enhancements: CEU/expiration tracking.
